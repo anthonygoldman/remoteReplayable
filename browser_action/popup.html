@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="browser_action.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="../utils/string_clean.js"></script>
+  <script src="../utils/storage.js"></script>
+  <script src="../utils/alerts.js"></script>
+  <script src="active_rules.js"></script>
+  <script src="browser_action.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h2>PII Rules Block</h2>
+		<div id="active_rules"></div>
+		<form id="PII_Form">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">PII Object Import</label>
+		    <textarea class="form-control" id="PIITextArea" rows="15">{&#013;&#010;}</textarea>
+		  </div>
+		  <div class="row">
+			  <div class="col-xs-6">
+				  <div class="form-group">
+				  	<button type="submit" id="PIIApply" class="btn btn-success">Apply PII Rules</button>
+				  </div>
+			  </div>
+		  <div class="col-xs-6 pull-right">	  
+			  <div class="form-group">
+			  	<button type="submit" id="PIIClear" class="btn btn-danger">Clear PII Rules</button>
+			  </div>
+		  </div>
+		  </div>
+		</form>
+		<iframe src="../eval-sandbox.html" id="eval-sandbox"></iframe>
+	</div>
+	<div id="message-block"></div>
+	<script src="popup.js"></script>
+</body>
+</html>

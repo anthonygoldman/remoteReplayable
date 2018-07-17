@@ -1,0 +1,5 @@
+body {width: 450px; height: 450px; padding: 10px}
+#eval-sandbox {display: none;}
+.pull-right {text-align: right;}
+#active_rules {font-size: 10px;}
+#active_rules div {margin: 5px 10px;}

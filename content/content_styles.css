@@ -1,0 +1,18 @@
+.staticBlockEls {background-color: darkred !important; outline-width:4px; outline-color: darkred; outline-style:solid;}
+.dynamicBlockEls {background-color: darkred !important; outline-width:4px; outline-color: darkred; outline-style:solid;}
+.selectiveMaskZones {background-color: red !important; outline-width:4px; outline-color:red; outline-style:solid;}
+.defaultBlockEls {background-color: pink !important; outline-width:4px; outline-color:pink; outline-style:solid;}
+.fsrVisible {background-color:cyan !important;}
+.staticVisibleEls  {background-color: darkgreen !important;}
+.dynamicVisibleEls  {background-color: darkgreen !important;}
+select.dynamicVisibleEls {background: darkgreen !important; opacity: 1 !important;}
+.selectiveUnMaskZones {background-color:#0F0 !important;}
+.visibleInputs {background-color:green !important;}
+.assetBlockEls {background-color: darkorange !important; outline-width:4px; outline-color:darkorange; outline-style:solid;}
+.removeVisibilityEls{background-color:yellow;}
+.removeVisibilityEls.staticVisibleEls{outline-width:4px; outline-color:darkgreen; outline-style:solid;}
+.removeVisibilityEls.dynamicVisibleEls{outline-width:4px; outline-color:darkgreen; outline-style:solid;}
+.obscureEls{background-color:orangered !important; outline-width:4px; outline-color:orangered; outline-style:solid;}
+.redactZones{background-color:orange !important; outline-width:4px; outline-color:orange; outline-style:solid;}
+/*staticWhiteListEls and dynamicWhiteListEls ???? #comeback */
+.blackListedUrl{background-color:midnightblue !important;}

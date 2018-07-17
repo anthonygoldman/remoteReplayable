@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="utils/string_clean.js" type="text/javascript"></script>
+<script src="utils/key_check.js" type="text/javascript"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	// Expects to recieve data.pii as a string: returns marshalled JSON object or errors from eval
+	window.addEventListener('message', function(event) {
+	    var command = event.data.command;
+	    var pii_working = event.data.pii || "";
+	    var pii_checkstring = event.data.pii || "";
+	    var errors = ""
+	    var warnings = ""
+	    
+	   	// Clean PII string and eval working copy 
+	    try{
+	    	eval("pii_working = " + pii_working);
+			if(keyCountMatchWarnings(pii_working,pii_checkstring) != ""){
+				warnings = keyCountMatchWarnings(pii_working,pii_checkstring)
+			}
+	    	
+	    	pii_working = JSON.stringify(pii_working)
+	    	
+	    }
+	    catch(err){
+	    	pii_working = ""
+	    	errors = err.toString()
+	    }
+	    
+	   	// Return PII String
+	    switch(command) {
+	      case 'clean':
+	        event.source.postMessage({
+	          pii_marshalled: pii_working,
+	          errors: errors,
+	          warnings: warnings
+	        }, event.origin);
+	        break;
+	    }
+	  });
+	</script>
+</body>
+</html>
