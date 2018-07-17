@@ -49,3 +49,11 @@ Lots of changes. Added a boolean for legacy, set to always true (for now). Added
 Added a lot of logic in the updateScreenMasking function and in the chrome.storage.onChanged.addListener to account for legacy and modern values that could be passed so that they can all be handled instead of ignored in the future.
 - utils/string_clean.js -
 Fleshed out the rules_blacklist to hold all potential information coming in from both legacy and modern record in preparation for trying to start moving items over to rules_whitelist.
+
+1.4:
+- content/content_script.js -
+Added all legacy values to WHITELIST_KEYS.
+- content/content_styles.css -
+Realized staticWhiteListEls and dynamicWhiteListEls had been left out, wrote a note to remind myself to figure out where in the list to add them and add them in later.
+- utils/string_clean.js -
+Added all legacy values to rules_whitelist and took them out of rules_blacklist.
