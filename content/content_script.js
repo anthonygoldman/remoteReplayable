@@ -50,14 +50,14 @@ function updateScreenMasking(rules){
 			whatsUpdated+="!"
 		}
 		whatsUpdated+="assetBlockEls "
-	}else if(rules.removeVisiblityEls){
+	}else if(rules.removeVisibilityEls){
 		if(legacy){
-			applyBlockingClasses(rules.removeVisiblityEls,"removeVisiblityEls")
+			applyBlockingClasses(rules.removeVisibilityEls,"removeVisibilityEls")
 		}
 		else{
 			whatsUpdated+="!"
 		}
-		whatsUpdated+="removeVisiblityEls "
+		whatsUpdated+="removeVisibilityEls "
 	}else if(rules.obscureEls){
 		if(legacy){
 			applyBlockingClasses(rules.obscureEls,"obscureEls")
@@ -210,9 +210,9 @@ chrome.storage.onChanged.addListener(function(changes){
 		console.log("Changes ready in assetBlockEls")
 		fetchRules("assetBlockEls",updateScreenMasking)
 	}
-	if(changes.removeVisiblityEls && changes.removeVisiblityEls.newValue){
-		console.log("Changes ready in removeVisiblityEls")
-		fetchRules("removeVisiblityEls",updateScreenMasking)
+	if(changes.removeVisibilityEls && changes.removeVisibilityEls.newValue){
+		console.log("Changes ready in removeVisibilityEls")
+		fetchRules("removeVisibilityEls",updateScreenMasking)
 	}
 	if(changes.obscureEls && changes.obscureEls.newValue){
 		console.log("Changes ready in obscureEls")

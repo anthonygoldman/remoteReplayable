@@ -52,7 +52,7 @@ Fleshed out the rules_blacklist to hold all potential information coming in from
 
 1.4:
 - content/content_script.js -
-Added all legacy values to WHITELIST_KEYS.
+Added all legacy values to WHITELIST_KEYS. Also fixed typo with removeVisibility.
 - content/content_styles.css -
 Realized staticWhiteListEls and dynamicWhiteListEls had been left out, wrote a note to remind myself to figure out where in the list to add them and add them in later.
 - utils/string_clean.js -
